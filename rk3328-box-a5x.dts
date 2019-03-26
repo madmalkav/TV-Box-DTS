@@ -990,7 +990,7 @@
 		pinctrl-0 = <0x4a>;
 		clocks = <0x2 0x3c 0x2 0xd6>;
 		clock-names = "pwm", "pclk";
-		status = "okay";
+		status = "disabled";
 		remote_pwm_id = <0x3>;
 		handle_cpu_id = <0x1>;
 		remote_support_psci = <0x1>;
@@ -3015,16 +3015,13 @@
 		phandle = <0x65>;
 	};
 
-/* We don't have any clue about this one in Android, 
- * and it doesn't seems to work, so I set it to disable
- */
 	ir-receiver {
 		compatible = "gpio-ir-receiver";
 		gpios = <0x3e 0x2 0x1>;
-		linux,rc-map-name = "rc-trn9";
+		linux,rc-map-name = "rc-a5x";
 		pinctrl-0 = <0x8f>;
 		pinctrl-names = "default";
-		status = "disabled";
+		status = "okay";
 	};
 
 	hdmi-sound {
